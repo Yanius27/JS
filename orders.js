@@ -34,3 +34,14 @@ const orders = [
   ]  
 }
 ]
+
+let isActiv = [];
+let isPassiv = [];
+
+function pushElem(elem) {
+  
+}
+
+function isMassiv(elem) {
+  Array.isArray(elem) && elem.forEach(isMassiv) && pushElem;
+}
