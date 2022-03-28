@@ -17,7 +17,7 @@ const orders = [
   ]
 },
 {
-  id: 2
+  id: 2,
   isActiv: false,
   child: [
   {
@@ -35,13 +35,17 @@ const orders = [
 }
 ]
 
-let isActiv = [];
-let isPassiv = [];
+let isApproved = [];
+let isUnApproved = [];
 
 function pushElem(elem) {
-  
+  orders.isActiv == true ? isApproved.push(elem) : isUnApprovrd.push(elem);
 }
 
 function isMassiv(elem) {
-  Array.isArray(elem) && elem.forEach(isMassiv) && pushElem;
+  Array.isArray(elem) ? elem.forEach(isMassiv) : pushElem;
 }
+
+isMassiv(orders);
+console.log(isApproved);
+console.log(isUnApproved);
