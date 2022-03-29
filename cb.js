@@ -17,11 +17,11 @@ function isApprovedOrNot(elem) {
   elem.isActiv === true ? app.push(elem) : unApp.push(elem);
 }
 
-function mainFunc(elem) {
-  Array.isArray(elem) && elem.forEach(isApprovedOrNot); 
+function mainFunc(arr, cb) {
+  Array.isArray(arr) && arr.forEach(cb); 
 }
 
-mainFunc(applications);
+mainFunc(applications, isApprovedOrNot);
 
 console.log(app);
 console.log(unApp);
