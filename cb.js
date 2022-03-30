@@ -13,15 +13,17 @@ const applications = [
 
 let app = [];
 let unApp = [];
-function isApprovedOrNot(elem) {
-  elem.isActiv === true ? app.push(elem) : unApp.push(elem);
+function isApproved(elem) {app.push(elem)};
+
+function orNotApproved(elem) {unApp.push(elem)};
+
+function mainFunc(arr, cb1, cb2) {
+  Array.isArray(arr) && arr.forEach(function status(arr) {
+    arr.isActiv === true ? cb1 : cb2;
+  }); 
 }
 
-function mainFunc(arr, cb) {
-  Array.isArray(arr) && arr.forEach(cb); 
-}
-
-mainFunc(applications, isApprovedOrNot);
+mainFunc(applications, isApproved, orNotApproved);
 
 console.log(app);
 console.log(unApp);
