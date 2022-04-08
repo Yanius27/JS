@@ -11,14 +11,16 @@ const applications = [
     {id: 10, isActiv: false},
   ]; //Массив объектов с заявками
 
-/*const resetStatus = applications.map(elem => {
-  elem.isActiv = 'false';
-  return elem;
-});*/
+const resetStatus = applications.map(elem => ({
+  ...elem,
+  isActiv: false
+}));
 
-const onlyActiv = applications.filter(elem => {
-  return elem.isActiv == 'true';
-});
+/*const onlyActiv = applications.filter(elem => ({
+  ...elem
+  isActiv: true
+}));*/
 
-//console.log(resetStatus);
-console.log(onlyActiv);
+console.log(resetStatus);
+console.log(applications);
+//console.log(onlyActiv);
