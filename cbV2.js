@@ -13,7 +13,6 @@ const applications = [
 
 const resetStatus = applications.map(elem => ({
   ...elem,
-<<<<<<< HEAD
   isActiv: false,
   date: new Date(),
 })); //С помощью метода .map и spread-оператора создаём новый массив со
@@ -29,16 +28,3 @@ const onlyActiv = applications.filter(elem => elem.isActiv).map(elem => ({
 console.log(applications);
 console.log(resetStatus);
 console.log(onlyActiv);
-=======
-  isActiv: false
-}));
-
-/*const onlyActiv = applications.filter(elem => ({
-  ...elem
-  isActiv: true
-}));*/
-
-console.log(resetStatus);
-console.log(applications);
-//console.log(onlyActiv);
->>>>>>> f2bf32f8b5769ee1d6057e90c481f6fd511a4ae4
