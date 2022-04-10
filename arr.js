@@ -9,18 +9,22 @@ function search(elem) {
 
 function objFunc(elem) {
   if(elem.isActiv) {
-    elem.status = 'approved';
-    elem.date = new Date();
-
-    approved.push(elem);
+    approved.push({
+    ...elem,
+    status: 'approved',
+    date: new Date(),
+    })
   }
   else {
-    garbage.push(elem);
+    garbage.push({...elem});
   }
 }
 
 search(arr);
 
+console.log('                                 ');
+console.log('==========original array==========');
+console.log(arr);
 console.log('                                 ');
 console.log('=========approved array=========');
 console.log(approved);
