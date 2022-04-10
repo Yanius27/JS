@@ -8,7 +8,15 @@ function search(elem) {
 }
 
 function objFunc(elem) {
-  elem.isActiv === true ? (elem.status = 'approved') && (elem.date = new Date()) && (approved.push(elem)) : garbage.push(elem);
+  if(elem.isActiv) {
+    elem.status = 'approved';
+    elem.date = new Date();
+
+    approved.push(elem);
+  }
+  else {
+    garbage.push(elem);
+  }
 }
 
 search(arr);
